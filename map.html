@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte du voyage - Senglea malte</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    .info-window { max-width: 250px; font-family: Arial, sans-serif; }
+    .info-window img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
+    .info-window h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
+    .info-window p { margin: 5px 0; font-size: 14px; color: #666; }
+    .info-window a { color: #1a73e8; text-decoration: none; }
+    .info-window a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  
+  <script>
+    function initMap() {
+      const center = { lat: 35.87781424, lng: 14.47855624 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: center
+      });
+      
+      const markers = [{"lat":35.8878874,"lng":14.5167449,"name":"Senglea","jour":1,"titre":"Arrivée en douceur à Senglea","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=35.8878874,14.5167449&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=35.8878874,14.5167449","aiImageUrl":"jour1.jpg"},{"lat":35.8878874,"lng":14.5167449,"name":"Senglea, Vittoriosa, Cospicua","jour":2,"titre":"Immersion dans les Trois Cités","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=35.8878874,14.5167449&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=35.8878874,14.5167449","aiImageUrl":"jour2.jpg"},{"lat":35.8992375,"lng":14.5140996,"name":"La Valette","jour":3,"titre":"Majestueuse La Valette","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=35.8992375,14.5140996&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=35.8992375,14.5140996","aiImageUrl":"jour3.jpg"},{"lat":35.8863691,"lng":14.4031146,"name":"Mdina, Rabat","jour":4,"titre":"Mdina, la Cité du Silence","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=35.8863691,14.4031146&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=35.8863691,14.4031146","aiImageUrl":"jour4.jpg"},{"lat":35.8276898,"lng":14.4420772,"name":"Sud de Malte (Hagar Qim, Mnajdra, Grotte Bleue)","jour":5,"titre":"Mystères Antiques et Côte Sauvage","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=35.8276898,14.4420772&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=35.8276898,14.4420772","aiImageUrl":"jour5.jpg"}];
+      
+      markers.forEach((markerData) => {
+        const marker = new google.maps.Marker({
+          position: { lat: markerData.lat, lng: markerData.lng },
+          map: map,
+          title: markerData.name,
+          label: String(markerData.jour)
+        });
+        
+        const contentString = `
+          <div class="info-window">
+            <img src="${markerData.streetViewUrl}" alt="Street View de ${markerData.name}" />
+            <h3>Jour ${markerData.jour}</h3>
+            <p><strong>${markerData.name}</strong></p>
+            <p><a href="${markerData.streetViewLinkUrl}" target="_blank" rel="noopener noreferrer"><strong>${markerData.titre}</strong></a></p>
+          </div>
+        `;
+        
+        const infoWindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        marker.addListener('click', () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+  
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI&callback=initMap">
+  </script>
+</body>
+</html>
