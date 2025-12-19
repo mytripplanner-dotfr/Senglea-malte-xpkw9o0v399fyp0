@@ -1,0 +1,231 @@
+{
+  "pays": "Malte",
+  "drapeau": "🇲🇹",
+  "symbole": "☀️",
+  "titre": "Senglea, Joyau Maltais : Une Évasion Méditerranéenne",
+  "budget_total": "2050€",
+  "duree": "6 jours",
+  "temps_vol": "12-15h avec escale depuis Mass city, Etats-Unis",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée en douceur à Senglea",
+      "legende": "Après un long voyage, la première journée est dédiée à une arrivée paisible et à une première immersion dans l'atmosphère unique de Senglea. Laissez-vous charmer par les ruelles étroites et les vues imprenables sur le Grand Port, une introduction parfaite à la beauté maltaise. Profitez de cette journée pour vous acclimater et savourer la tranquillité des lieux.",
+      "lieu": "Senglea",
+      "activites": [
+        "🛬 <strong>Arrivée à l'aéroport de Malte (MLA) et transfert à Senglea</strong>: Prenez un taxi ou un bus direct pour rejoindre votre hôtel à Senglea, une des Trois Cités historiques. Le trajet offre déjà un aperçu des paysages maltais.",
+        "🛏️ <strong>Installation à l'hôtel et détente</strong>: Après le check-in, prenez le temps de vous rafraîchir et de vous reposer. Votre hôtel 3 étoiles vous offrira tout le confort nécessaire pour bien commencer votre séjour.",
+        "🚶‍♂️ <strong>Balade le long du front de mer de Senglea</strong>: Promenez-vous sur la promenade de Senglea, connue sous le nom de 'Isla', et admirez les vues spectaculaires sur La Valette et Vittoriosa. C'est l'occasion idéale pour une première découverte sans effort."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil d'arrivée",
+          "texte": "Pour un transfert rapide et sans stress, réservez un taxi à l'avance ou utilisez l'application Bolt, très populaire à Malte."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Dîner local",
+          "texte": "De nombreux petits restaurants le long du front de mer de Senglea proposent des plats maltais authentiques avec vue sur le port."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏰",
+      "titre": "Immersion dans les Trois Cités",
+      "legende": "Aujourd'hui, plongez au cœur de l'histoire maltaise en explorant les Trois Cités : Senglea, Vittoriosa (Birgu) et Cospicua (Bormla). Ces villes fortifiées regorgent de trésors architecturaux et de récits chevaleresques. Laissez-vous guider par les ruelles sinueuses et les panoramas maritimes, témoins d'un passé glorieux et d'une culture vibrante.",
+      "lieu": "Senglea, Vittoriosa, Cospicua",
+      "activites": [
+        "🚶‍♀️ <strong>Exploration de Senglea et de la Gardjola</strong>: Commencez par le cœur de Senglea, visitez l'église Notre-Dame de la Victoire et montez à la Gardjola, une tour de guet emblématique offrant une vue panoramique imprenable sur le Grand Port et La Valette. Ses yeux sculptés sont un symbole de protection.",
+        "🛥️ <strong>Traversée vers Vittoriosa (Birgu) et découverte du Fort Saint-Ange</strong>: Prenez un 'dghajsa' (bateau-taxi traditionnel) pour traverser le port jusqu'à Vittoriosa. Explorez le Fort Saint-Ange, un site historique majeur qui a joué un rôle crucial lors du Grand Siège de Malte en 1565. Ses remparts offrent des vues spectaculaires.",
+        "🚶‍♂️ <strong>Flânerie dans les rues de Vittoriosa et Cospicua</strong>: Perdez-vous dans les ruelles médiévales de Vittoriosa, découvrez le Palais de l'Inquisiteur et le Musée Maritime. Continuez vers Cospicua, la plus grande des Trois Cités, pour admirer ses fortifications et son architecture locale."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Chaussures confortables",
+          "texte": "Prévoyez des chaussures confortables, car les Trois Cités se visitent principalement à pied et comportent de nombreuses montées et descentes."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Point photo",
+          "texte": "La Gardjola de Senglea est un spot photo incontournable, surtout au lever ou au coucher du soleil."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏛️",
+      "titre": "Majestueuse La Valette",
+      "legende": "Aujourd'hui, cap sur La Valette, la capitale de Malte, classée au patrimoine mondial de l'UNESCO. Cette ville fortifiée, construite par les Chevaliers de Saint-Jean, est un musée à ciel ouvert. Entre ses palais baroques, ses jardins luxuriants et ses vues imprenables sur la mer, La Valette promet une journée riche en découvertes culturelles et architecturales. Préparez-vous à être émerveillé par son élégance intemporelle.",
+      "lieu": "La Valette",
+      "activites": [
+        "⛴️ <strong>Traversée en ferry de Senglea à La Valette</strong>: Prenez le ferry depuis Cospicua (à quelques minutes de Senglea) pour une traversée pittoresque du Grand Port jusqu'à La Valette. C'est une manière agréable et rapide de rejoindre la capitale.",
+        "⛪ <strong>Visite de la Co-Cathédrale Saint-Jean</strong>: Admirez l'intérieur somptueux de cette cathédrale baroque, chef-d'œuvre de l'art maltais. Ne manquez pas les œuvres du Caravage, notamment 'La Décollation de Saint Jean-Baptiste', un tableau d'une intensité rare.",
+        "🌳 <strong>Détente aux Jardins d'Upper Barrakka</strong>: Profitez d'une pause relaxante dans ces jardins publics offrant une vue panoramique spectaculaire sur le Grand Port et les Trois Cités. Assistez au tir au canon quotidien à midi ou 16h."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "👗",
+          "titre": "Code vestimentaire",
+          "texte": "Pour la Co-Cathédrale Saint-Jean, prévoyez des épaules et des genoux couverts. Des châles sont parfois disponibles à l'entrée."
+        },
+        {
+          "symbole": "🚶‍♂️",
+          "titre": "Exploration à pied",
+          "texte": "La Valette est une ville très agréable à explorer à pied, mais préparez-vous à quelques montées et descentes."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "👑",
+      "titre": "Mdina, la Cité du Silence",
+      "legende": "Aujourd'hui, échappez à l'agitation urbaine pour une immersion dans le passé médiéval de Malte avec la visite de Mdina, la 'Cité du Silence'. Cette ancienne capitale fortifiée, perchée sur une colline, offre une atmosphère unique et des vues imprenables sur l'île. Poursuivez votre exploration à Rabat, sa ville jumelle, pour découvrir des catacombes fascinantes et une culture locale authentique. Une journée entre histoire et sérénité.",
+      "lieu": "Mdina, Rabat",
+      "activites": [
+        "🚌 <strong>Voyage en bus vers Mdina et Rabat</strong>: Prenez un bus local depuis La Valette (ou un taxi/Bolt depuis Senglea) pour rejoindre Mdina. Le réseau de bus maltais est efficace et économique. Le trajet dure environ 30-45 minutes.",
+        "🤫 <strong>Exploration de Mdina, la Cité du Silence</strong>: Flânez dans les ruelles étroites et silencieuses de Mdina, admirez la Cathédrale Saint-Paul et les palais normands et baroques. Les vues depuis les remparts sont à couper le souffle.",
+        "💀 <strong>Visite des Catacombes de Saint-Paul à Rabat</strong>: À quelques pas de Mdina, explorez les vastes catacombes souterraines de Saint-Paul et Sainte-Agathe à Rabat. Ces sites archéologiques offrent un aperçu fascinant des pratiques funéraires des premiers chrétiens de Malte."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🤫",
+          "titre": "Ambiance",
+          "texte": "Mdina est surnommée la 'Cité du Silence' pour une bonne raison. Respectez la tranquillité des lieux, surtout en soirée."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Pause gourmande",
+          "texte": "Ne manquez pas de goûter les 'pastizzi', une pâtisserie salée maltaise, dans une boulangerie locale à Rabat."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🗿",
+      "titre": "Mystères Antiques et Côte Sauvage",
+      "legende": "Cette journée est dédiée à la découverte des merveilles préhistoriques de Malte et de ses paysages côtiers spectaculaires. Explorez les temples mégalithiques de Hagar Qim et Mnajdra, des sites plus anciens que les pyramides d'Égypte, puis laissez-vous émerveiller par la beauté naturelle de la Grotte Bleue. Une immersion entre histoire millénaire et panoramas marins à couper le souffle, offrant une perspective différente de l'île.",
+      "lieu": "Sud de Malte (Hagar Qim, Mnajdra, Grotte Bleue)",
+      "activites": [
+        "🚗 <strong>Excursion vers les temples mégalithiques de Hagar Qim et Mnajdra</strong>: Louez une voiture pour la journée ou optez pour un tour organisé pour visiter ces temples préhistoriques, classés à l'UNESCO. Ils témoignent d'une civilisation avancée datant de plus de 5000 ans.",
+        "💙 <strong>Découverte de la Grotte Bleue (Blue Grotto)</strong>: Admirez les eaux turquoise et les formations rocheuses impressionnantes de la Grotte Bleue. Si le temps le permet, une excursion en bateau (payante) vous permettra d'explorer l'intérieur des grottes et de voir les couleurs éclatantes de l'eau."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Les sites archéologiques sont souvent en plein air. Prévoyez chapeau, lunettes de soleil et crème solaire."
+        },
+        {
+          "symbole": "⏰",
+          "titre": "Meilleur moment pour la Grotte Bleue",
+          "texte": "Le matin est le meilleur moment pour visiter la Grotte Bleue, lorsque le soleil illumine l'eau et crée des reflets bleus intenses."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🛫",
+      "titre": "Derniers instants et départ",
+      "legende": "Profitez de vos dernières heures à Senglea pour quelques achats de souvenirs ou une dernière promenade le long du port. Repensez aux découvertes et aux moments inoubliables passés sur cette île méditerranéenne. Il est temps de préparer votre départ, la tête remplie de souvenirs précieux et l'envie de revenir explorer davantage les trésors de Malte.",
+      "lieu": "Senglea",
+      "activites": [
+        "🛍️ <strong>Achats de souvenirs locaux</strong>: Flânez dans les petites boutiques de Senglea ou des Trois Cités pour trouver des souvenirs artisanaux, comme de la dentelle maltaise, des objets en verre de Mdina ou des produits locaux.",
+        "☕ <strong>Dernier café avec vue sur le port</strong>: Savourez un dernier café ou petit-déjeuner dans un des cafés du front de mer de Senglea, profitant une dernière fois de la vue apaisante sur le Grand Port.",
+        "🛫 <strong>Transfert à l'aéroport de Malte (MLA) et vol retour</strong>: Organisez votre transfert vers l'aéroport en fonction de l'heure de votre vol. Prévoyez suffisamment de temps pour les formalités d'embarquement."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Idées cadeaux",
+          "texte": "Le verre soufflé de Malte, notamment celui de Mdina Glass, est un souvenir élégant et unique."
+        },
+        {
+          "symbole": "✈️",
+          "titre": "Check-in en ligne",
+          "texte": "Pensez à faire votre check-in en ligne pour gagner du temps à l'aéroport."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "900€/pers (vol aller-retour Mass city, US - Malte en classe économique)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "120€/pers (transferts aéroport, bus locaux, ferries, 1 jour de location de voiture ou taxi)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "300€/pers (6 jours, repas de type moyen, incluant quelques spécialités locales)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "500€/pers (5 nuits en hôtel 3 étoiles à Senglea, base chambre double)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "230€/pers (entrées sites, musées, excursions bateau, dghajsa)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois d'avril, mai, septembre et octobre.",
+      "symbole": "☀️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La population de Malte est d'environ 530 000 habitants, ce qui en fait l'un des pays les plus densément peuplés d'Europe.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "Malte est un archipel méditerranéen composé de trois îles principales : Malte, Gozo et Comino. C'est le plus petit État membre de l'Union Européenne.",
+      "symbole": "🇲🇹"
+    },
+    {
+      "titre": "La langue maltaise est unique, c'est la seule langue sémitique écrite en caractères latins. L'anglais est également une langue officielle et est largement parlé.",
+      "symbole": "🗣️"
+    },
+    {
+      "titre": "Malte abrite des temples mégalithiques, comme Hagar Qim et Mnajdra, qui sont plus anciens que les pyramides d'Égypte et Stonehenge.",
+      "symbole": "🗿"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Site officiel du tourisme à Malte",
+      "titre": "Visit Malta",
+      "url": "https://www.visitmalta.com/fr/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Informations sur les transports publics à Malte",
+      "titre": "Malta Public Transport",
+      "url": "https://www.publictransport.com.mt/",
+      "symbole": "🚌"
+    },
+    {
+      "legende": "Prévisions météo détaillées pour Malte",
+      "titre": "Malta Weather",
+      "url": "https://www.maltaweather.com/",
+      "symbole": "🌤️"
+    }
+  ]
+}
