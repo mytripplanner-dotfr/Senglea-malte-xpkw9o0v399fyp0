@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senglea, Joyau Maltais : Une Évasion Méditerranéenne </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée en douceur à Senglea</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Immersion dans les Trois Cités</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Majestueuse La Valette</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Mdina, la Cité du Silence</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Mystères Antiques et Côte Sauvage</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Derniers instants et départ</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Senglea-malte-xpkw9o0v399fyp0/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">SENGLEA- MALTE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Senglea, Joyau Maltais : Une Évasion Méditerranéenne</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 6 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 2050€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 12-15h avec escale depuis Mass city, Etats-Unis</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée en douceur à Senglea</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, la première journée est dédiée à une arrivée paisible et à une première immersion dans l'atmosphère unique de Senglea. Laissez-vous charmer par les ruelles étroites et les vues imprenables sur le Grand Port, une introduction parfaite à la beauté maltaise. Profitez de cette journée pour vous acclimater et savourer la tranquillité des lieux.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à l'aéroport de Malte (MLA) et transfert à Senglea</strong>: Prenez un taxi ou un bus direct pour rejoindre votre hôtel à Senglea, une des Trois Cités historiques. Le trajet offre déjà un aperçu des paysages maltais.</li><li>🛏️ <strong>Installation à l'hôtel et détente</strong>: Après le check-in, prenez le temps de vous rafraîchir et de vous reposer. Votre hôtel 3 étoiles vous offrira tout le confort nécessaire pour bien commencer votre séjour.</li><li>🚶‍♂️ <strong>Balade le long du front de mer de Senglea</strong>: Promenez-vous sur la promenade de Senglea, connue sous le nom de 'Isla', et admirez les vues spectaculaires sur La Valette et Vittoriosa. C'est l'occasion idéale pour une première découverte sans effort.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Senglea-malte-xpkw9o0v399fyp0/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil d'arrivée</p>
+                                <p class="text-gray-700">Pour un transfert rapide et sans stress, réservez un taxi à l'avance ou utilisez l'application Bolt, très populaire à Malte.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Dîner local</p>
+                                <p class="text-gray-700">De nombreux petits restaurants le long du front de mer de Senglea proposent des plats maltais authentiques avec vue sur le port.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion dans les Trois Cités</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, plongez au cœur de l'histoire maltaise en explorant les Trois Cités : Senglea, Vittoriosa (Birgu) et Cospicua (Bormla). Ces villes fortifiées regorgent de trésors architecturaux et de récits chevaleresques. Laissez-vous guider par les ruelles sinueuses et les panoramas maritimes, témoins d'un passé glorieux et d'une culture vibrante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♀️ <strong>Exploration de Senglea et de la Gardjola</strong>: Commencez par le cœur de Senglea, visitez l'église Notre-Dame de la Victoire et montez à la Gardjola, une tour de guet emblématique offrant une vue panoramique imprenable sur le Grand Port et La Valette. Ses yeux sculptés sont un symbole de protection.</li><li>🛥️ <strong>Traversée vers Vittoriosa (Birgu) et découverte du Fort Saint-Ange</strong>: Prenez un 'dghajsa' (bateau-taxi traditionnel) pour traverser le port jusqu'à Vittoriosa. Explorez le Fort Saint-Ange, un site historique majeur qui a joué un rôle crucial lors du Grand Siège de Malte en 1565. Ses remparts offrent des vues spectaculaires.</li><li>🚶‍♂️ <strong>Flânerie dans les rues de Vittoriosa et Cospicua</strong>: Perdez-vous dans les ruelles médiévales de Vittoriosa, découvrez le Palais de l'Inquisiteur et le Musée Maritime. Continuez vers Cospicua, la plus grande des Trois Cités, pour admirer ses fortifications et son architecture locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Senglea-malte-xpkw9o0v399fyp0/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Chaussures confortables</p>
+                                <p class="text-gray-700">Prévoyez des chaussures confortables, car les Trois Cités se visitent principalement à pied et comportent de nombreuses montées et descentes.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Point photo</p>
+                                <p class="text-gray-700">La Gardjola de Senglea est un spot photo incontournable, surtout au lever ou au coucher du soleil.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Majestueuse La Valette</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, cap sur La Valette, la capitale de Malte, classée au patrimoine mondial de l'UNESCO. Cette ville fortifiée, construite par les Chevaliers de Saint-Jean, est un musée à ciel ouvert. Entre ses palais baroques, ses jardins luxuriants et ses vues imprenables sur la mer, La Valette promet une journée riche en découvertes culturelles et architecturales. Préparez-vous à être émerveillé par son élégance intemporelle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛴️ <strong>Traversée en ferry de Senglea à La Valette</strong>: Prenez le ferry depuis Cospicua (à quelques minutes de Senglea) pour une traversée pittoresque du Grand Port jusqu'à La Valette. C'est une manière agréable et rapide de rejoindre la capitale.</li><li>⛪ <strong>Visite de la Co-Cathédrale Saint-Jean</strong>: Admirez l'intérieur somptueux de cette cathédrale baroque, chef-d'œuvre de l'art maltais. Ne manquez pas les œuvres du Caravage, notamment 'La Décollation de Saint Jean-Baptiste', un tableau d'une intensité rare.</li><li>🌳 <strong>Détente aux Jardins d'Upper Barrakka</strong>: Profitez d'une pause relaxante dans ces jardins publics offrant une vue panoramique spectaculaire sur le Grand Port et les Trois Cités. Assistez au tir au canon quotidien à midi ou 16h.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Senglea-malte-xpkw9o0v399fyp0/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👗 Code vestimentaire</p>
+                                <p class="text-gray-700">Pour la Co-Cathédrale Saint-Jean, prévoyez des épaules et des genoux couverts. Des châles sont parfois disponibles à l'entrée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♂️ Exploration à pied</p>
+                                <p class="text-gray-700">La Valette est une ville très agréable à explorer à pied, mais préparez-vous à quelques montées et descentes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mdina, la Cité du Silence</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, échappez à l'agitation urbaine pour une immersion dans le passé médiéval de Malte avec la visite de Mdina, la 'Cité du Silence'. Cette ancienne capitale fortifiée, perchée sur une colline, offre une atmosphère unique et des vues imprenables sur l'île. Poursuivez votre exploration à Rabat, sa ville jumelle, pour découvrir des catacombes fascinantes et une culture locale authentique. Une journée entre histoire et sérénité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚌 <strong>Voyage en bus vers Mdina et Rabat</strong>: Prenez un bus local depuis La Valette (ou un taxi/Bolt depuis Senglea) pour rejoindre Mdina. Le réseau de bus maltais est efficace et économique. Le trajet dure environ 30-45 minutes.</li><li>🤫 <strong>Exploration de Mdina, la Cité du Silence</strong>: Flânez dans les ruelles étroites et silencieuses de Mdina, admirez la Cathédrale Saint-Paul et les palais normands et baroques. Les vues depuis les remparts sont à couper le souffle.</li><li>💀 <strong>Visite des Catacombes de Saint-Paul à Rabat</strong>: À quelques pas de Mdina, explorez les vastes catacombes souterraines de Saint-Paul et Sainte-Agathe à Rabat. Ces sites archéologiques offrent un aperçu fascinant des pratiques funéraires des premiers chrétiens de Malte.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Senglea-malte-xpkw9o0v399fyp0/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤫 Ambiance</p>
+                                <p class="text-gray-700">Mdina est surnommée la 'Cité du Silence' pour une bonne raison. Respectez la tranquillité des lieux, surtout en soirée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Pause gourmande</p>
+                                <p class="text-gray-700">Ne manquez pas de goûter les 'pastizzi', une pâtisserie salée maltaise, dans une boulangerie locale à Rabat.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mystères Antiques et Côte Sauvage</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est dédiée à la découverte des merveilles préhistoriques de Malte et de ses paysages côtiers spectaculaires. Explorez les temples mégalithiques de Hagar Qim et Mnajdra, des sites plus anciens que les pyramides d'Égypte, puis laissez-vous émerveiller par la beauté naturelle de la Grotte Bleue. Une immersion entre histoire millénaire et panoramas marins à couper le souffle, offrant une perspective différente de l'île.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Excursion vers les temples mégalithiques de Hagar Qim et Mnajdra</strong>: Louez une voiture pour la journée ou optez pour un tour organisé pour visiter ces temples préhistoriques, classés à l'UNESCO. Ils témoignent d'une civilisation avancée datant de plus de 5000 ans.</li><li>💙 <strong>Découverte de la Grotte Bleue (Blue Grotto)</strong>: Admirez les eaux turquoise et les formations rocheuses impressionnantes de la Grotte Bleue. Si le temps le permet, une excursion en bateau (payante) vous permettra d'explorer l'intérieur des grottes et de voir les couleurs éclatantes de l'eau.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Senglea-malte-xpkw9o0v399fyp0/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Les sites archéologiques sont souvent en plein air. Prévoyez chapeau, lunettes de soleil et crème solaire.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Meilleur moment pour la Grotte Bleue</p>
+                                <p class="text-gray-700">Le matin est le meilleur moment pour visiter la Grotte Bleue, lorsque le soleil illumine l'eau et crée des reflets bleus intenses.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers instants et départ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de vos dernières heures à Senglea pour quelques achats de souvenirs ou une dernière promenade le long du port. Repensez aux découvertes et aux moments inoubliables passés sur cette île méditerranéenne. Il est temps de préparer votre départ, la tête remplie de souvenirs précieux et l'envie de revenir explorer davantage les trésors de Malte.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Achats de souvenirs locaux</strong>: Flânez dans les petites boutiques de Senglea ou des Trois Cités pour trouver des souvenirs artisanaux, comme de la dentelle maltaise, des objets en verre de Mdina ou des produits locaux.</li><li>☕ <strong>Dernier café avec vue sur le port</strong>: Savourez un dernier café ou petit-déjeuner dans un des cafés du front de mer de Senglea, profitant une dernière fois de la vue apaisante sur le Grand Port.</li><li>🛫 <strong>Transfert à l'aéroport de Malte (MLA) et vol retour</strong>: Organisez votre transfert vers l'aéroport en fonction de l'heure de votre vol. Prévoyez suffisamment de temps pour les formalités d'embarquement.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Senglea-malte-xpkw9o0v399fyp0/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Idées cadeaux</p>
+                                <p class="text-gray-700">Le verre soufflé de Malte, notamment celui de Mdina Glass, est un souvenir élégant et unique.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Check-in en ligne</p>
+                                <p class="text-gray-700">Pensez à faire votre check-in en ligne pour gagner du temps à l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>900€/pers (vol aller-retour Mass city, US - Malte en classe économique)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>120€/pers (transferts aéroport, bus locaux, ferries, 1 jour de location de voiture ou taxi)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>300€/pers (6 jours, repas de type moyen, incluant quelques spécialités locales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>500€/pers (5 nuits en hôtel 3 étoiles à Senglea, base chambre double)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>230€/pers (entrées sites, musées, excursions bateau, dghajsa)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois d'avril, mai, septembre et octobre.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 La population de Malte est d'environ 530 000 habitants, ce qui en fait l'un des pays les plus densément peuplés d'Europe.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇲🇹 Malte est un archipel méditerranéen composé de trois îles principales : Malte, Gozo et Comino. C'est le plus petit État membre de l'Union Européenne.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ La langue maltaise est unique, c'est la seule langue sémitique écrite en caractères latins. L'anglais est également une langue officielle et est largement parlé.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗿 Malte abrite des temples mégalithiques, comme Hagar Qim et Mnajdra, qui sont plus anciens que les pyramides d'Égypte et Stonehenge.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Senglea-malte-xpkw9o0v399fyp0/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.visitmalta.com/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Malta</strong></a></li>
+                    
+                        <li><a href="https://www.publictransport.com.mt/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚌 Malta Public Transport</strong></a></li>
+                    
+                        <li><a href="https://www.maltaweather.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Malta Weather</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
